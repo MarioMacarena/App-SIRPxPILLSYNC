@@ -35,3 +35,28 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import '@ionic/angular/css/palettes/dark.system.css';
+
+
+.alert-ok {
+  display: flex;
+  align-items: center;
+  color: green;
+  font-weight: 500;
+  gap: 0.5rem;
+}
+
+.alert-warning {
+  display: flex;
+  align-items: center;
+  color: #d93737;
+  font-weight: 600;
+  gap: 0.5rem;
+}
+
+.alert-info {
+  display: flex;
+  align-items: center;
+  color: #3182ce;
+  font-weight: 500;
+  gap: 0.5rem;
+}

@@ -25,3 +25,26 @@
 #container a {
   text-decoration: none;
 }
+
+.alerta-activa {
+  --background: #ffcccc;
+  border: 2px solid red;
+  color: darkred;
+}
+
+.texto-alerta {
+  color: red;
+  font-weight: bold;
+}
+
+ion-card.normal {
+  border-left: 6px solid var(--ion-color-success);
+  background-color: #1e2a1e; 
+  color: var(--ion-color-light); 
+}
+
+ion-card.alerta {
+  border-left: 6px solid var(--ion-color-danger);
+  background-color: #2a1e1e; 
+  color: var(--ion-color-light); 
+}

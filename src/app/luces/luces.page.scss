@@ -1,0 +1,13 @@
+ion-content {
+  display: flex;
+  justify-content: center; 
+  align-items: center;   
+  height: 100vh;
+  flex-direction: column;
+  position: relative;
+}
+
+.contenido {
+  margin-top: 15vh;
+  text-align: center;
+}

@@ -1,0 +1,90 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Configuracion de Alertas</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="openAlertConfigModal()">
+        <ion-icon name="settings-outline" class="large-icon"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen> 
+  <form [formGroup]="controlForm" #formDirective="ngForm">
+
+  
+  <ion-button expand="block" color="warning" (click)="resetForm()">Reiniciar valores</ion-button>
+
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Temperatura</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-input
+          type="number"
+          label="°C"
+          formControlName="temperature"
+          placeholder="Ej. 25">
+        </ion-input>
+        <ion-button expand="block" (click)="setTemperature()">Fijar Temperatura</ion-button>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Humedad</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-input
+          type="number"
+          label="%"
+          formControlName="humidity"
+          placeholder="Ej. 50">
+        </ion-input>
+        <ion-button expand="block" (click)="setHumidity()">Fijar Humedad</ion-button>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Gas</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-input
+          type="number"
+          label="Valor"
+          formControlName="gas"
+          placeholder="Ej. 90">
+        </ion-input>
+        <ion-button expand="block" (click)="setGas()">Fijar Valor de Gas</ion-button>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Movimiento</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-select formControlName="motion" placeholder="Selecciona">
+          <ion-select-option [value]="true">Detectado</ion-select-option>
+          <ion-select-option [value]="false">No detectado</ion-select-option>
+        </ion-select>
+        <ion-button expand="block" (click)="setMotion()">Fijar Movimiento</ion-button>
+      </ion-card-content>
+    </ion-card>
+
+  </form>
+
+  <ion-card>
+  <ion-card-content>
+    <ion-card-header>
+        <ion-card-title>Alarma</ion-card-title>
+      </ion-card-header>
+   <ion-button expand="block"  [color]="alarmOn ? 'success' : 'medium'" (click)="toggleAlarm()">
+  {{ alarmOn ? 'Apagar Alarma' : 'Encender Alarma' }}
+</ion-button>
+  </ion-card-content>
+</ion-card>
+
+</ion-content>

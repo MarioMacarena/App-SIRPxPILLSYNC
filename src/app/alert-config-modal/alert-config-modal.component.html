@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Configuración de Alertas</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="closeModal()" slot="end">Cerrar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>Gas</ion-label>
+      <ion-toggle
+        [checked]="alertasActivas().gas"
+        (ionChange)="cambiarEstado('gas', $event)"
+      ></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Movimiento</ion-label>
+      <ion-toggle
+        [checked]="alertasActivas().movimiento"
+        (ionChange)="cambiarEstado('movimiento', $event)"
+      ></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Temperatura</ion-label>
+      <ion-toggle
+        [checked]="alertasActivas().temperatura"
+        (ionChange)="cambiarEstado('temperatura', $event)"
+      ></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Humedad</ion-label>
+      <ion-toggle
+        [checked]="alertasActivas().humedad"
+        (ionChange)="cambiarEstado('humedad', $event)"
+      ></ion-toggle>
+    </ion-item>
+  </ion-list>
+</ion-content>

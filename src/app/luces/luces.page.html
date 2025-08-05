@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Control de LED</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <div class="contenido">
+    <ion-icon 
+      [name]="ledOn ? 'bulb' : 'bulb-outline'" 
+      [style.color]="ledOn ? '#FFD700' : '#888888'"
+      (click)="toggleLed()" 
+      style="font-size: 250px; cursor: pointer;"
+      role="button"
+      aria-label="Toggle LED"
+    ></ion-icon>
+
+    <p style="font-size: 1.5rem; margin-top: 20px;">
+      LED está <strong>{{ ledOn ? 'Encendido' : 'Apagado' }}</strong>
+    </p>
+  </div>
+</ion-content>
+
